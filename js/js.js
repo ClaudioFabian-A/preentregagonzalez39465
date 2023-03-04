@@ -187,15 +187,23 @@ while (cantidadSEleccionada === false) {
         )
     }
 
-     let suma = (cantidadDeTomasElegidas.valorCantidad + tamañoDeLasTomasEleguidas.valorCantidad) * medioDeCancelacionEleguido.tasa
-   
+    function suma (monto1, monto2,monto3){
+        monto1 = cantidadDeTomasElegidas.valorCantidad
+        monto2 = tamañoDeLasTomasEleguidas.valorTamañoDeTomas
+        monto3 = medioDeCancelacionEleguido.tasa
+
+        const suma = parseInt(((monto1 + monto2) * monto3))
+        return suma
+    } 
+
     console.log(cantidadDeTomasElegidas.valorCantidad)
     console.log(tamañoDeLasTomasEleguidas.valorTamañoDeTomas)
     console.log(medioDeCancelacionEleguido.tasa)
 
-   
+
 
 }
-alert(`las opciones son: ${cantidadDeTomasElegidas.valorCantidad}`)
+alert(`las opciones son: ${cantidadDeTomasElegidas.valorCantidad} 
+`)
 
 
