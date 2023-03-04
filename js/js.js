@@ -1,11 +1,7 @@
 
 
-let cantidadDeTomasElegidas = parseInt(prompt('seleccione la cantidad de fotografias a realizar 3 o 6'));
-let tamañoDeLasTomasEleguidas = parseInt(prompt('selecione el tamano en que quiere sean reveladas y si desea album'));
-let medioDeCancelacionEleguido = parseInt(prompt('selecione medio de pago'));
 
-
-class cantidadDeTomas {
+class CantidadDeTomas {
     constructor(cantidad, id, valorCantidad) {
 
         this.cantidad = cantidad;
@@ -13,7 +9,7 @@ class cantidadDeTomas {
         this.valorCantidad = valorCantidad;
     }
 }
-class tamañoDeTomas {
+class TamañoDeTomas {
     constructor(tamaño, id, valorTamañoDeTomas) {
 
 
@@ -23,7 +19,7 @@ class tamañoDeTomas {
     }
 
 }
-class medioDeCancelaciontasa {
+class MedioDeCancelacionTasa {
     constructor(metodo, id, tasa) {
 
         this.metodo = metodo;
@@ -34,16 +30,24 @@ class medioDeCancelaciontasa {
 }
 
 
-const fotos3 = new cantidadDeTomas('Tres tomas', 3, 500)
-const fotos6 = new cantidadDeTomas('Seis tomas', 6, 1000)
+const fotos3 = new CantidadDeTomas('Tres tomas', 3, 500)
+const fotos6 = new CantidadDeTomas('Seis tomas', 6, 1000)
 
-const tamaño10151 = new tamañoDeTomas('10 X 15', 1, 1000)
-const tamaño15251 = new tamañoDeTomas('15 x 25', 2, 2000)
+const tamaño10151 = new TamañoDeTomas('10 X 15', 1, 1000)
+const tamaño15251 = new TamañoDeTomas('15 x 25', 2, 2000)
 
-const medioDeCancelacion1 = new medioDeCancelaciontasa('Efectivo', 1, -0.1)
-const medioDeCancelacion3 = new medioDeCancelaciontasa('tres cuotas', 3, 1.1)
-const medioDeCancelacion6 = new medioDeCancelaciontasa('seis cuotas', 6, 1.5)
-const medioDeCancelacion12 = new medioDeCancelaciontasa('doce cuotas', 12, 1.8)
+const medioDeCancelacion1 = new MedioDeCancelacionTasa('Efectivo', 1, -0.1)
+const medioDeCancelacion3 = new MedioDeCancelacionTasa('tres cuotas', 3, 1.1)
+const medioDeCancelacion6 = new MedioDeCancelacionTasa('seis cuotas', 6, 1.5)
+const medioDeCancelacion12 = new MedioDeCancelacionTasa('doce cuotas', 12, 1.8)
+
+
+
+let cantidadDeTomasElegidas = parseInt(prompt('seleccione la cantidad de fotografias a realizar 3 o 6'));
+let tamañoDeLasTomasEleguidas = parseInt(prompt('selecione el tamaño de la impresion, 1 para 10 X 15, 2 para 15 X 25.'));
+let medioDeCancelacionEleguido = parseInt(prompt('selecione medio de pago, 1 para efectivo, o 3, 6 o 12 cuotas con interes'));
+
+
 
 let cantidadSEleccionada = false
 let dimencionDeTomas = false
@@ -105,6 +109,9 @@ while (cantidadSEleccionada === false) {
                         )
                     }
                 }
+            } else {
+                tamañoDeLasTomasEleguidas = parseInt(prompt('Seleccione una opcion correcta 1. para 10 X 15, 2 para 15 X 25'))
+
             }
 
 
@@ -115,7 +122,7 @@ while (cantidadSEleccionada === false) {
         cantidadSEleccionada = true
         cantidadDeTomasElegidas = fotos6
         while (dimencionDeTomas === false) {
-            if (tamañoDeLasTomasEleguidas === 1) {
+            if (tamañoDeLasTomasEleguidas === 2) {
 
                 dimencionDeTomas = true
 
@@ -174,31 +181,21 @@ while (cantidadSEleccionada === false) {
 
 
 
-    }
-
-
-
-
-
-    else {
+    } else {
         cantidadDeTomasElegidas = parseInt(
             prompt('escoja la cantidad de tomas disponibles 3 o 6.')
         )
     }
+
+     let suma = (cantidadDeTomasElegidas.valorCantidad + tamañoDeLasTomasEleguidas.valorCantidad) * medioDeCancelacionEleguido.tasa
+   
     console.log(cantidadDeTomasElegidas.valorCantidad)
     console.log(tamañoDeLasTomasEleguidas.valorTamañoDeTomas)
-    console.log(medioDeCancelacionEleguido)
+    console.log(medioDeCancelacionEleguido.tasa)
 
-
-
+   
 
 }
-class calcularMonto {
-    constructor(cantidadDeTomasElegidas.valorCantidad, tamañoDeLasTomasEleguidas.valorTamañoDeTomas, medioDeCancelacionEleguido.tasa) {
-        this.cantidadDeTomasElegidas.valorCantidad = ;
-        this.tamañoDeLasTomasEleguidas.valorTamañoDeTomas;
-        this.medioDeCancelacionEleguido.tasa;
-    }
-}
-const montoAAbonar = new calcularMonto
+alert(`las opciones son: ${cantidadDeTomasElegidas.valorCantidad}`)
+
 
