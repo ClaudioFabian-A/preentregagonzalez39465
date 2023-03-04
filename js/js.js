@@ -1,57 +1,36 @@
-// prompt("hola");
 
-// const nombre = prompt('ingrese su nombre de usuario,(Hypatia)').toLocaleLowerCase();
-// const passWor = +prompt('ingrese su password');
-//                 console.log(passWor);
-//                 console.log(nombre);
-
-//                 if ((nombre === "") || (nombre != 'hypatia') || (passWor != 123) ){
-//                     alert('datos incorrectos');
-//                 }else{                    
-//                    alert('bienvenido '+ nombre);
-//                    document.write("<h1> hola "+ nombre+"</h1>");
-
-
-//                 }
-
-// function muestraMensaje(elemento) {
-//     const seleccionA = prompt('¿desea agendar fecha de entrevista?');
-//     const seleccionC = prompt('¿desea cancelar una cita?');
-//     const dia = prompt('seleccione un dia disponible de la semana.');
-//     const hora = prompt('seleccione un horario disponible.');
-//     const cancela = prompt('tiene cita para el 5 de marzo a las 18 hs.¿desae cancelar?');
-//     if (seleccionA === 'a') {
-//         document.write("<h2>" + seleccionA + "</h2>");
-//         console.log(seleccionA);
-//     }
-// }
-// document.write("hola");
 
 let cantidadDeTomasElegidas = parseInt(prompt('seleccione la cantidad de fotografias a realizar 3 o 6'));
 let tamañoDeLasTomasEleguidas = parseInt(prompt('selecione el tamano en que quiere sean reveladas y si desea album'));
 let medioDeCancelacionEleguido = parseInt(prompt('selecione medio de pago'));
 
 
-function cantidadDeTomas(cantidad, id, valorCantidad) {
-    this.cantidad = cantidad;
-    this.id = id;
-    this.valorCantidad = valorCantidad;
+class cantidadDeTomas {
+    constructor(cantidad, id, valorCantidad) {
+
+        this.cantidad = cantidad;
+        this.id = id;
+        this.valorCantidad = valorCantidad;
+    }
+}
+class tamañoDeTomas {
+    constructor(tamaño, id, valorTamañoDeTomas) {
 
 
+        this.tamaño = tamaño;
+        this.id = id;
+        this.valorTamañoDeTomas = valorTamañoDeTomas;
+    }
 
 }
-function tamañoDeTomas(tamaño, id, valorTamañoDeTomas) {
+class medioDeCancelaciontasa {
+    constructor(metodo, id, tasa) {
 
-    this.tamaño = tamaño;
-    this.id = id;
-    this.valorTamañoDeTomas = valorTamañoDeTomas;
+        this.metodo = metodo;
+        this.id = id;
+        this.tasa = tasa;
 
-}
-function medioDeCancelaciontasa(metodo, id, tasa) {
-    this.metodo = metodo;
-    this.id = id;
-    this.tasa = tasa;
-
+    }
 }
 
 
@@ -69,9 +48,6 @@ const medioDeCancelacion12 = new medioDeCancelaciontasa('doce cuotas', 12, 1.8)
 let cantidadSEleccionada = false
 let dimencionDeTomas = false
 let medioDePago = false
-
-// let cantidadDeTomas
-
 
 while (cantidadSEleccionada === false) {
     if (cantidadDeTomasElegidas === 3) {
@@ -106,7 +82,7 @@ while (cantidadSEleccionada === false) {
                     }
                 }
             } else if (tamañoDeLasTomasEleguidas === 2) {
-                tamañoDeTomas = true
+                dimencionDeTomas = true
                 tamañoDeLasTomasEleguidas = tamaño15251
 
                 while (medioDePago === false) {
@@ -166,7 +142,7 @@ while (cantidadSEleccionada === false) {
                     }
                 }
             } else if (tamañoDeLasTomasEleguidas === 2) {
-                tamañoDeTomas = true
+                dimencionDeTomas = true
                 tamañoDeLasTomasEleguidas = tamaño15251
 
                 while (medioDePago === false) {
@@ -209,15 +185,20 @@ while (cantidadSEleccionada === false) {
             prompt('escoja la cantidad de tomas disponibles 3 o 6.')
         )
     }
+    console.log(cantidadDeTomasElegidas.valorCantidad)
+    console.log(tamañoDeLasTomasEleguidas.valorTamañoDeTomas)
+    console.log(medioDeCancelacionEleguido)
+
 
 
 
 }
-
-
-
-console.log(cantidadDeTomasElegidas);
-// console.log(tamañoDeLasTomasEleguidas);
-// console.log(medioDeCancelacionEleguido);
-
+class calcularMonto {
+    constructor(cantidadDeTomasElegidas.valorCantidad, tamañoDeLasTomasEleguidas.valorTamañoDeTomas, medioDeCancelacionEleguido.tasa) {
+        this.cantidadDeTomasElegidas.valorCantidad = ;
+        this.tamañoDeLasTomasEleguidas.valorTamañoDeTomas;
+        this.medioDeCancelacionEleguido.tasa;
+    }
+}
+const montoAAbonar = new calcularMonto
 
