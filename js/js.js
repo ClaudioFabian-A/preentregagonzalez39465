@@ -199,11 +199,10 @@ while (cantidadSEleccionada === false) {
     console.log(cantidadDeTomasElegidas.valorCantidad)
     console.log(tamañoDeLasTomasEleguidas.valorTamañoDeTomas)
     console.log(medioDeCancelacionEleguido.tasa)
-
+    console.log(cantidadDeTomasElegidas.valorCantidad)
 
 
 }
-alert(`las opciones son: ${cantidadDeTomasElegidas.valorCantidad} 
-`)
+alert(`El valor total por la impresion de ${cantidadDeTomasElegidas.id} fotografias, con un tamaño de ${tamañoDeLasTomasEleguidas.tamaño} abonando en ${medioDeCancelacionEleguido.metodo} es de: $ ${(cantidadDeTomasElegidas.valorCantidad + tamañoDeLasTomasEleguidas.valorTamañoDeTomas)*medioDeCancelacionEleguido.tasa}`)
 
 
